@@ -88,9 +88,12 @@ func parseRequest(request Request) string {
 	funcName := strings.Title(r.Replace(parsedURL.Host))
 	funcName = strings.ReplaceAll(funcName, " ", "") + "_" + RandStringBytes(10)
 
+	encodingType := request.PostData.MimeType
 	data := request.PostData.Text
 	method := request.Method
 	URL := request.URL
+	info := fmt.Sprintf(`"%s" request @ %s`, method, URL)
+
 	l := "`"
 	var headers string
 	for _, h := range request.Headers {
@@ -104,6 +107,15 @@ func parseRequest(request Request) string {
 	final := fmt.Sprintf(
 		`
 func %s() {
+
+
+	/* 
+
+		Info :%s
+
+		Type: %s
+
+	*/ 
 
 	data := %s
 
@@ -125,6 +137,7 @@ func %s() {
 	if err != nil {
 		fmt.Println(err)
 	}
+	defer res.Body.Close()
 
 	body, err := ioutil.ReadAll(res.Body)
 	if err != nil {
@@ -134,7 +147,7 @@ func %s() {
 	fmt.Println(string(body))
 	
 }
-		`, funcName, l+data+l, method, URL, headers)
+		`, funcName, info, encodingType, l+data+l, method, URL, headers)
 
 	return final
 }
