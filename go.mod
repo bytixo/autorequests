@@ -1,4 +1,4 @@
-module github.com/bytixo/HAR-Parser
+module github.com/bytixo/autorequests
 
 go 1.17
 

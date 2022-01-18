@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"github.com/bytixo/HAR-Parser/app"
+	"github.com/bytixo/autorequests/app"
 )
 
 func main() {
