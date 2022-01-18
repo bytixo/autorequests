@@ -1,4 +1,4 @@
-# HAR-Parser
+# autorequests
 
 Creating API Wrappers have never been easier
 
@@ -10,7 +10,7 @@ Creating API Wrappers have never been easier
 ## Command flags 
 
 ```
-Usage of ./HAR-Parser:
+Usage of ./autorequests:
   -exclude string
         comma separated list of URL patterns you would like to exclude. Providing "-exclude facebook,science" will remove every URL that contains "facebook" AND/OR "science"
   -i string
@@ -22,10 +22,10 @@ Usage of ./HAR-Parser:
 
 this will skip URL's that contains "science"
 ```sh
-$ ./HAR-Parser -i ./example/discord.com.har -exclude science -o ./example/discord.com.go
+$ ./autorequests -i ./example/discord.com.har -exclude science -o ./example/discord.com.go
 ```
 ## Example
-* See [example folder](https://github.com/bytixo/HAR-Parser/tree/main/example) for output and input
+* See [example folder](https://github.com/bytixo/autorequests/tree/main/example) for output and input
 
 ```go
 
