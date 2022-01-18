@@ -9,7 +9,7 @@ It will then reformat the content of these requests to intelligible Go code, all
 - Write every requests no matter the method
 - Can parse huge .har files in seconds
 - Format code on save
-- Support URL query parameters
+- Support URL query parameters [see](https://github.com/bytixo/autorequests/blob/bd6332d9135ba316d843b1f075f3382cd9a11808/example/discord.com.go#L244)
 
 ## Command flags 
 
