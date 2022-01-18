@@ -1,11 +1,15 @@
 # autorequests
 
-Creating API Wrappers have never been easier
+*"Creating API Wrappers have never been easier"*
+
+autorequests will parse the provided .har file ([HAR (file format)](https://en.wikipedia.org/wiki/HAR_(file_format))) and look for "fetch" and "xhr" events.
+It will then reformat the content of these requests to intelligible Go code, allowing you to create a an API wrapper easily or help you understanding a request made in your browser.
 
 ## Features
 - Write every requests no matter the method
 - Can parse huge .har files in seconds
 - Format code on save
+- Support URL query parameters
 
 ## Command flags 
 
