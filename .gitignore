@@ -1,0 +1,6 @@
+
+*.iml
+*.xml
+HAR-Parser
+example/.DS_Store
+.DS_Store
