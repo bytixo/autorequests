@@ -1,11 +1,15 @@
 package main
 
 import (
+	"math/rand"
+	"time"
 	"flag"
 	"github.com/bytixo/autorequests/app"
 )
 
 func main() {
+	rand.Seed(time.Now().UnixNano())
+	
 	var exclude string
 	var output string
 	var filename string
